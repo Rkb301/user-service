@@ -1,0 +1,35 @@
+version: 1
+# Demo port: 8081; endpoints: POST /users, GET /users/{id}, GET /users/{id}/profile
+service_name: user-service
+model:
+  provider: openai
+  model: openai:gpt-5-mini
+  allowed_models:
+    - openai:gpt-5-mini
+  max_hypotheses: 5
+  max_attempts: 2
+jira:
+  mode: fake
+  project_key: DEMO
+  issue_type: Bug
+  title_template: "[{service_name}] {error_name}"
+  description_template: "{description}"
+  solution_template: "{proposed_solution}"
+  update_pr_link: true
+github:
+  mode: fake
+  default_base_branch: main
+  create_pull_request: true
+repair:
+  require_plan_approval: true
+  dry_run_default: true
+  test_command: mvn test
+  build_system: maven
+  language: java
+  module_path: null
+langsmith:
+  enabled: false
+  project: microservice-ai-repair-bot
+  tags:
+    - mvp-demo
+    - user-service

@@ -1,0 +1,17 @@
+target/
+.env
+.env.*
+.idea/
+.vscode/
+.settings/
+.classpath
+.project
+*.iml
+__pycache__/
+.pytest_cache/
+.tmp/
+logs/
+runs/
+*.log
+.DS_Store
+Thumbs.db
