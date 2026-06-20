@@ -1,4 +1,4 @@
-package com.example.user;
+﻿package com.example.user;
 
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpServer;
@@ -51,9 +51,6 @@ public class UserServiceApp {
 
     public static String getProfile(String userId) {
         String profile = PROFILES.get(userId);
-        if (profile == null) {
-            return "{\"error\":\"profile not found\"}";
-        }
         return "{\"profile\":\"" + profile.toUpperCase() + "\"}";
     }
 
