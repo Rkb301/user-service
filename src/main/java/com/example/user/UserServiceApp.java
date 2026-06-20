@@ -1,4 +1,4 @@
-﻿package com.example.user;
+package com.example.user;
 
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpServer;
