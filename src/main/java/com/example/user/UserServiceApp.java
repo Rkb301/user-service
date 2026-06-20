@@ -51,6 +51,9 @@ public class UserServiceApp {
 
     public static String getProfile(String userId) {
         String profile = PROFILES.get(userId);
+        if (profile == null) {
+            return "{\"error\":\"profile not found\"}";
+        }
         return "{\"profile\":\"" + profile.toUpperCase() + "\"}";
     }
 
