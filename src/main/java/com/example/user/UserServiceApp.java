@@ -54,6 +54,9 @@ public class UserServiceApp {
         if (profile == null) {
             return "{\"error\":\"profile not found\"}";
         }
+        if (profile == null) {
+            return "{\"error\":\"profile not found\"}";
+        }
         return "{\"profile\":\"" + profile.toUpperCase() + "\"}";
     }
 
